@@ -1,0 +1,7 @@
+vm_name = "test"
+zone = "us-east1-b"
+network = "default"
+machine_type = "n1-standard-1"
+image = "debian-cloud/debian-9"
+interface = "SCSI"
+policy_name ="snapshot-schedule"
