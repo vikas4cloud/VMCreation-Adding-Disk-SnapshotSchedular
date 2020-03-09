@@ -1,23 +1,25 @@
-resource "google_compute_instance" "default" {
-  name         = "${var.vm_name}"
-  machine_type = "${var.machine_type}"
-  zone         = "${var.zone}"
+resource "google_compute_instance" "migration" {
+  name         = "usg-n-${var.regionshort}-${var.env}-tmp-migration"
+  machine_type = var.machine_type
+  zone         = var.zone
 
+  tags = ["no-ip"]
+
+  can_ip_forward = false
+  allow_stopping_for_update = false
 
   boot_disk {
     initialize_params {
-      image = "${var.image}"
-    }
-  }
-
-  // Local SSD disk
-  scratch_disk {
-    interface = "${var.interface}"
+      image = var.image
+      type = "pd-standard"
+      size = var.disk_size
+   }
   }
 
   network_interface {
-    network = "${var.network}"
-}
+    subnetwork = var.kube_subnetwork
+  }
+
 }
 
 resource "google_compute_disk_resource_policy_attachment" "attachment" {
