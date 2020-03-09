@@ -7,5 +7,3 @@ machine_type = "n1-standard-1"
 policy_name ="snapshot-schedule"
 kube_subnetwork=""
 external_ip=""
-
-
