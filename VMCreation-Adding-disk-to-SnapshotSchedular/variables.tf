@@ -1,6 +1,5 @@
 variable env {}
 variable zone {}
-variable network {}
 variable image {}
 variable disk_size {}
 variable regionshort {}
