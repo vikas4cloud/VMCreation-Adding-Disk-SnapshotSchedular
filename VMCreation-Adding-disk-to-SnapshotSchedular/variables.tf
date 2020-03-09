@@ -4,7 +4,6 @@ variable image {}
 variable disk_size {}
 variable regionshort {}
 variable machine_type {}
-variable interface  {}
 variable policy_name {}
 variable kube_subnetwork {}
 variable external_ip {}
