@@ -1,11 +1,12 @@
 module "VMCreation-Adding-disk-to-SnapshotSchedular" {
   source = "./VMCreation-Adding-disk-to-SnapshotSchedular"
 
-  vm_name      = "${var.vm_name}"
-  zone         = "${var.zone}"
-  network      = "${var.network}"
-  machine_type = "${var.machine_type}"
+  env      =     "${var.env}"
+  zone           "${var.zone}"
   image        = "${var.image}"
-  interface    = "${var.interface}"
+  disk_size   =  "${var.disk_size}"
+  regionshort   =  "${var.regionshort}"
+  machine_type = "${var.machine_type}"
+  kube_subnetwork    = "${var.kube_subnetwork}"
   policy_name  = "${var.policy_name}"
 }
