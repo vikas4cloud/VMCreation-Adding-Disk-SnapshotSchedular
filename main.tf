@@ -2,7 +2,7 @@ module "VMCreation-Adding-disk-to-SnapshotSchedular" {
   source = "./VMCreation-Adding-disk-to-SnapshotSchedular"
 
   env      =     "${var.env}"
-  zone           "${var.zone}"
+  zone      =     "${var.zone}"
   image        = "${var.image}"
   disk_size   =  "${var.disk_size}"
   regionshort   =  "${var.regionshort}"
