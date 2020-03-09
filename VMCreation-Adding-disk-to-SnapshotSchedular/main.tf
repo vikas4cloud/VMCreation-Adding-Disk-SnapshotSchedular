@@ -24,6 +24,6 @@ resource "google_compute_instance" "migration" {
 
 resource "google_compute_disk_resource_policy_attachment" "attachment" {
   name = "${var.policy_name}"
-  disk =  google_compute_instance.default.name
+  disk =  google_compute_instance.migration.name
   zone = "${var.zone}"
 }
