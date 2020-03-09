@@ -6,4 +6,3 @@ variable regionshort {}
 variable machine_type {}
 variable policy_name {}
 variable kube_subnetwork {}
-variable external_ip {}
