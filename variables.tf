@@ -1,7 +1,12 @@
-variable vm_name {}
+variable env {}
 variable zone {}
 variable network {}
+variable image {}
+variable disk_size {}
+variable regionshort {}
 variable machine_type {}
 variable image {}
 variable interface  {}
 variable policy_name {}
+variable kube_subnetwork {}
+variable external_ip {}
